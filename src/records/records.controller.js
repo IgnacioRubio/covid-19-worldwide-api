@@ -24,8 +24,6 @@ exports.findById = (req, res, next) => {
 exports.findByCountryId = (req, res, next) => {
   const countryId = req.params.id;
 
-  console.log("countryId: " + countryId);
-
   Records.find({ countryId: countryId }, (err, docs) => {
     if (err) return next(err);
     
