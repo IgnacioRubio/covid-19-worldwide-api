@@ -7,6 +7,7 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 
 const countriesRoutes = require('./src/countries/countries.routes');
+const recordsRoutes = require('./src/records/records.routes');
 
 const app = express();
 
@@ -27,6 +28,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 // all routes to handle http request
 app.use('/countries', countriesRoutes);
+app.use('/records', recordsRoutes);
 
 // error for not request handle
 app.use((req, res, next) => {

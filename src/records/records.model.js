@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const Schema = mongoose.Schema();
+const Schema = mongoose.Schema;
 
 
 const recordsSchema = new Schema({
@@ -8,3 +8,5 @@ const recordsSchema = new Schema({
     dateReceptor: { type: String, required: true },
     countryId: { type: mongoose.ObjectId, required: true }
 });
+
+module.exports = mongoose.model('Records', recordsSchema);
